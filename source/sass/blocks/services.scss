@@ -1,0 +1,148 @@
+.services {
+  background-color: $dark-grey;
+  font-family: $font-primary;
+  padding-bottom: 123px;
+}
+
+.services__wrapper {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.services__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 51px;
+  color: $white;
+
+  margin: 0;
+  padding-top: 89px;
+  padding-bottom: 51px;
+}
+
+.services__list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+
+  justify-content: center;
+
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.services__item {
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.services__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 63px;
+    height: 63px;
+    bottom: 4px;
+    right: 0;
+    background-color: $blue;
+
+    background-image: url("../../img/arrow.svg");
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover .services__link-name {
+    color: $blue;
+  }
+}
+
+.services__link-name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+
+  text-align: left;
+  max-width: 50%;
+
+  position: absolute;
+
+  left: 43px;
+  top: 30px;
+
+  transition: 0.3s;
+}
+
+@media (max-width: $desktop) {
+
+  .services__wrapper {
+    padding: 0 26px;
+  }
+
+  .services__title {
+    max-width: 87%;
+    font-size: 28px;
+    line-height: 45px;
+  }
+
+  .services .services__item {
+    margin: 0;
+  }
+
+  .services__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services__item {
+
+    &:not(:last-child) {
+      margin-bottom: 46px;
+    }
+  }
+
+  .services__link img {
+    width: 715px;
+    height: 256px;
+  }
+
+  .services__link-name {
+    max-width: 27%;
+  }
+}
+
+@media (max-width: $tablet) {
+
+  .services__wrapper {
+    padding: 0 16px;
+  }
+
+  .services__title {
+    font-size: 28px;
+    line-height: 39px;
+
+    max-width: 85%;
+  }
+
+  .services__link-name {
+    max-width: 60%;
+  }
+
+  .services__link img {
+    width: 290px;
+    height: 256px;
+  }
+}

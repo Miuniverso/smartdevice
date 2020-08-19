@@ -1,0 +1,22 @@
+.main-header {
+  background-color: rgba(27, 41, 49, 1);
+  background-image: url("../../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+
+  padding-bottom: 105px;
+}
+
+@media (max-width: $desktop) {
+  .main-header {
+    padding-bottom: 163px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .main-header {
+    padding-bottom: 70px;
+  }
+}

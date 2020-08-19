@@ -1,0 +1,357 @@
+.feedback {
+  background-color: $blue;
+  padding-bottom: 15px;
+
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/Polygon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+    right: -30px;
+    bottom: -5%;
+    z-index: 0;
+    // transform: rotate(180deg);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/Polygon-1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 267px;
+    height: 267px;
+    right: 13px;
+    top: 36px;
+    // bottom: 2%;
+    z-index: 0;
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  align-items: center;
+  max-width: 1349px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.feedback__title {
+  margin: 0;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+  letter-spacing: -2.3px;
+  margin-left: -5px;
+}
+
+.feedback__subtitle {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  margin-top: 9px;
+}
+
+.feedback__image {
+  position: relative;
+  // flex: 1;
+
+  background-image: url("../../img/plane.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 511px;
+  height: 288px;
+
+  margin-left: -23px;
+  margin-top: -45px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 640px;
+    height: 640px;
+    background-image: url("../../img/polygon-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    top: -221px;
+    left: -143px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 373px;
+    height: 373px;
+    background-image: url("../../img/polygon-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    top: 44px;
+    left: -176px;
+  }
+}
+
+.feedback__form-wrapper {
+  // flex: 1;
+  margin-left: -60px;
+  margin-top: -8px;
+
+  background-color: $blue;
+  z-index: 1;
+}
+
+.feedback__form {
+  max-width: 570px;
+  margin-top: 51px;
+  // margin: 0 auto;
+}
+
+.feedback__up {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+}
+
+.feedback__up label {
+  display: none;
+}
+
+.feedback__up input {
+  width: 270px;
+  min-height: 50px;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  box-sizing: border-box;
+}
+
+.feedback__text {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10 20px;
+  min-height: 154px;
+  resize: none;
+}
+
+.feedback .feedback__text,
+.feedback .feedback__up input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  outline: none;
+
+  &[placeholder] {
+    font-family: $font-secondary;
+    color: $white;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &::-webkit-input-placeholder {
+    color: white;
+  }
+
+  &::-moz-placeholder {
+    color: white;
+  } /* Firefox 19+ */
+  &:-moz-placeholder {
+    color: white;
+  } /* Firefox 18- */
+
+  &:-ms-input-placeholder{
+    color: white;
+  }
+}
+
+.feedback__down {
+  margin-top: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedback__btn {
+  transition: 0.3s;
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  color: $white;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background-color: transparent;
+
+  // padding: 15px 75px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  display: inline-block;
+  vertical-align: top;
+
+  width: 339px;
+
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
+}
+
+.feedback__check {
+  text-align: center;
+  position: relative;
+}
+
+.feedback__check label {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: $white;
+
+  opacity: 0.8;
+  // width: 64%;
+  display: inline-block;
+  vertical-align: top;
+
+  width: 68%;
+  text-align: start;
+  margin-left: 13px;
+}
+
+.feedback__check input:checked,
+.feedback__check input:not(:checked) {
+  opacity: 0;
+}
+
+.feedback__check input:checked+label::after,
+.feedback__check input:not(:checked)+label::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+  top: 0;
+  left: 30px;
+}
+
+.feedback__check input:checked+label::before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 5px;
+  top: 5px;
+  left: 35px;
+  background-image: url("../../img/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// .feedback__check input {
+//   position: relative;
+//   opacity: 0;
+//
+//   &::after {
+//     position: absolute;
+//     content: "";
+//     width: 16px;
+//     height: 16px;
+//     border: 1px solid $white;
+//   }
+// }
+
+@media (max-width: $desktop) {
+
+  .feedback {
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .feedback__image {
+    display: none;
+  }
+
+  .feedback__form-wrapper {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 75%;
+  }
+
+  .feedback__form {
+    max-width: 100%;
+  }
+
+  .feedback__up input {
+    width: 48.5%;
+  }
+
+  .feedback__title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .feedback__up {
+    flex-direction: column;
+  }
+
+  .feedback__up {
+    margin-bottom: 30px;
+  }
+
+  .feedback__up input {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .feedback__down {
+    flex-direction: column;
+  }
+
+  .feedback__btn {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
