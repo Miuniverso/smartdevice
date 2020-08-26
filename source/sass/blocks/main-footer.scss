@@ -149,6 +149,7 @@
 
 @media(max-width: $desktop) {
   .main-footer {
+    padding-top: 18px;
 
     &::after {
       bottom: 12%;
@@ -167,6 +168,16 @@
     display: block;
   }
 
+  .main-footer .nav {
+    margin-left: 4px;
+  }
+
+  .main-footer__time {
+    margin: 0;
+    margin-top: 8px;
+    margin-left: 14px;
+  }
+
   .main-footer__links {
     flex-direction: row;
     justify-content: space-between;
@@ -178,12 +189,13 @@
 
   .main-footer__links-list {
     margin: 0;
+    margin-right: -11px;
   }
 
   .main-footer__links-item {
 
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 15px;
     }
   }
 

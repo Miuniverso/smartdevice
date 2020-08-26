@@ -87,6 +87,9 @@
 }
 
 @media (max-width: $desktop) {
+  .services {
+    padding-bottom: 73px;
+  }
 
   .services__wrapper {
     padding: 0 26px;
@@ -96,6 +99,7 @@
     max-width: 87%;
     font-size: 28px;
     line-height: 45px;
+    padding-top: 49px;
   }
 
   .services .services__item {
@@ -110,7 +114,11 @@
   .services__item {
 
     &:not(:last-child) {
-      margin-bottom: 46px;
+      margin-bottom: 42px;
+    }
+
+    &:last-child .services__link-name {
+      top: 30px;
     }
   }
 
@@ -120,7 +128,9 @@
   }
 
   .services__link-name {
-    max-width: 27%;
+    max-width: 23%;
+    letter-spacing: -1.2px;
+    top: 19px;
   }
 }
 

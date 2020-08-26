@@ -296,6 +296,8 @@
 @media (max-width: $desktop) {
 
   .feedback {
+    padding-bottom: 3px;
+
     &::after {
       display: none;
     }
@@ -305,6 +307,10 @@
     }
   }
 
+  .feedback__wrapper {
+    padding-top: 80px;
+  }
+
   .feedback__image {
     display: none;
   }
@@ -312,7 +318,7 @@
   .feedback__form-wrapper {
     margin: 0 auto;
     text-align: left;
-    max-width: 75%;
+    max-width: 77%;
   }
 
   .feedback__form {
@@ -320,12 +326,49 @@
   }
 
   .feedback__up input {
-    width: 48.5%;
+    width: 47%;
   }
 
   .feedback__title {
     font-size: 32px;
     line-height: 45px;
+    letter-spacing: -1.9px;
+  }
+
+  .feedback__subtitle {
+    margin-top: 16px;
+  }
+
+  .feedback__form {
+    margin-top: 54px;
+  }
+
+  .feedback__text {
+    min-height: 162px;
+  }
+
+  .feedback__btn {
+    padding-top: 13px;
+    padding-bottom: 15px;
+    width: 352px;
+    letter-spacing: -0.8px;
+  }
+
+  .feedback__check label {
+    width: 63%;
+  }
+
+  .feedback__check input:checked+label::after,
+  .feedback__check input:not(:checked)+label::after {
+    top: 2px;
+    left: 41px;
+  }
+
+  .feedback__check input:checked+label::before {
+    width: 11px;
+    height: 10px;
+    top: 4px;
+    left: 43px;
   }
 }
 
