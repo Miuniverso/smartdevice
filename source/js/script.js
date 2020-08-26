@@ -39,20 +39,11 @@ overlay.addEventListener("click", closePopup);
 
 
 if (popup) {
-  var storage = localStorage.getItem("inputName");
-  storage = localStorage.getItem("phoneNumber");
-  storage = localStorage.getItem("question");
+  inputName.value = localStorage.getItem("inputName");
+  phoneNumber.value = localStorage.getItem("phoneNumber");
+  question.value = localStorage.getItem("question");
 
   var isStorageSupport = true;
-  storage = "";
-
-  try {
-    storage = localStorage.getItem("inputName");
-    storage = localStorage.getItem("phoneNumber");
-    storage = localStorage.getItem("question");
-  } catch (err) {
-    isStorageSupport = false;
-  }
 }
 
 function openPopup() {
@@ -67,6 +58,19 @@ function openPopup() {
   }
 }
 
+function closePopup() {
+  popup.classList.remove("open");
+  overlay.classList.remove("open");
+}
+
+function keyPress (e) {
+    if(e.key === "Escape") {
+        closePopup();
+    }
+}
+
+document.addEventListener("keydown", keyPress);
+
 popup.addEventListener("submit", function (evt) {
   console.log("1");
   if (!inputName.value || !phoneNumber.value || !question.value) {
@@ -80,16 +84,3 @@ popup.addEventListener("submit", function (evt) {
   }
   closePopup();
     });
-
-function closePopup() {
-  popup.classList.remove("open");
-  overlay.classList.remove("open");
-}
-
-function keyPress (e) {
-    if(e.key === "Escape") {
-        closePopup();
-    }
-}
-
-document.addEventListener("keydown", keyPress);
