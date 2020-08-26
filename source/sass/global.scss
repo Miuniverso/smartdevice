@@ -37,12 +37,27 @@ img {
 
 body {
   margin: 0;
-}
-
-.open {
-  display: block;
+  position: relative;
 }
 
 .btn-open {
   background-image: url("../../img/open.svg");
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  opacity: 0.5;
+
+  z-index: 1;
+
+  display: none;
+}
+
+.open {
+  display: block;
 }

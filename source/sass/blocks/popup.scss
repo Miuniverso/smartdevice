@@ -1,0 +1,197 @@
+.popup {
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  background-color: $blue;
+
+  max-width: 490px;
+  min-height: 605px;
+
+  padding: 40px;
+
+  display: none;
+}
+
+.popup__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../../img/close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  cursor: pointer;
+
+  transform: rotate(45deg);
+}
+
+.popup__title {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 39px;
+  color: $white;
+
+  margin: 0;
+}
+
+.popup__subtitle {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+
+  margin-bottom: 50px;
+
+  max-width: 90%;
+}
+
+.popup__up label {
+  display: none;
+}
+
+.popup input,
+.popup textarea {
+  border: 0;
+  background-color: rgba(255,255,255,.1);
+  outline: 0;
+  width: 100%;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 30px;
+
+  box-sizing: border-box;
+
+  &[placeholder] {
+    font-family: $font-secondary;
+    color: $white;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &::-webkit-input-placeholder {
+    color: white;
+  }
+
+  &::-moz-placeholder {
+    color: white;
+  } /* Firefox 19+ */
+  &:-moz-placeholder {
+    color: white;
+  } /* Firefox 18- */
+
+  &:-ms-input-placeholder{
+    color: white;
+  }
+}
+
+.popup textarea {
+  min-height: 104px;
+  resize: none;
+}
+
+.popup__up,
+.popup__down {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__btn {
+  transition: 0.3s;
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  color: $white;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background-color: transparent;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  display: inline-block;
+  vertical-align: top;
+
+
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
+}
+
+.popup__check {
+  text-align: center;
+  position: relative;
+  margin-top: 34px;
+  display: flex;
+}
+
+.popup__check label {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: $white;
+
+  opacity: 0.8;
+  display: inline-block;
+  vertical-align: top;
+
+  text-align: start;
+  margin-left: 13px;
+}
+
+.popup__check input:checked,
+.popup__check input:not(:checked) {
+  opacity: 0;
+  width: 45px;
+}
+
+.popup__check input:checked+label::after,
+.popup__check input:not(:checked)+label::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+  top: 0;
+  left: 0;
+}
+
+.popup__check input:checked+label::before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 5px;
+  top: 5px;
+  left: 4px;
+  background-image: url("../../img/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

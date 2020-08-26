@@ -93,6 +93,12 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
+
+  transition: 0.3s;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 .nav__mail::before {

@@ -1,3 +1,4 @@
+// футер аккардеон
 var btns = [document.querySelector(".sections__btn"), document.querySelector(".address__btn")];
 
 
@@ -19,3 +20,76 @@ for (var i = 0; i < btns.length; i++) {
     }
   })
 }
+
+// заказать звонок ПОПАП
+
+var popupBtn = document.querySelector(".nav__btn");
+var popup = document.querySelector(".popup");
+var popupClose = document.querySelector(".popup__close");
+var overlay = document.querySelector(".overlay");
+var inputName = document.querySelector(".popup__name");
+var phoneNumber = popup.querySelector(".popup__tel");
+var question = popup.querySelector(".popup__text");
+
+popupBtn.addEventListener("click", openPopup);
+
+popupClose.addEventListener("click", closePopup);
+
+overlay.addEventListener("click", closePopup);
+
+
+if (popup) {
+  var storage = localStorage.getItem("inputName");
+  storage = localStorage.getItem("phoneNumber");
+  storage = localStorage.getItem("question");
+
+  var isStorageSupport = true;
+  storage = "";
+
+  try {
+    storage = localStorage.getItem("inputName");
+    storage = localStorage.getItem("phoneNumber");
+    storage = localStorage.getItem("question");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+}
+
+function openPopup() {
+  popup.classList.add("open");
+  overlay.classList.add("open");
+
+  if (storage) {
+    inputName.value = storage;
+    phoneNumber.focus();
+  } else {
+    inputName.focus();
+  }
+}
+
+popup.addEventListener("submit", function (evt) {
+  console.log("1");
+  if (!inputName.value || !phoneNumber.value || !question.value) {
+    evt.preventDefault();
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("inputName", inputName.value);
+      localStorage.setItem("phoneNumber", phoneNumber.value);
+      localStorage.setItem("question", question.value);
+    }
+  }
+  closePopup();
+    });
+
+function closePopup() {
+  popup.classList.remove("open");
+  overlay.classList.remove("open");
+}
+
+function keyPress (e) {
+    if(e.key === "Escape") {
+        closePopup();
+    }
+}
+
+document.addEventListener("keydown", keyPress);
