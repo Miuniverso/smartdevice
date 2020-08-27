@@ -18,7 +18,10 @@
   display: none;
 }
 
-.address p {
+.address p,
+.address a {
+  transition: 0.3s;
+
   font-family: $font-secondary;
   font-style: normal;
   font-weight: normal;
@@ -31,6 +34,11 @@
   opacity: 0.5;
 
   margin: 0;
+}
+
+.address a:hover {
+  color: $blue;
+  opacity: 1;
 }
 
 .address__info {
