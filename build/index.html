@@ -157,11 +157,12 @@
         <form class="feedback__form" action="" method="post">
           <div class="feedback__up">
             <label for="name">Имя</label>
-            <input type="text" name="name" placeholder="Имя" required="">
-            <label for="">Телефон</label>
-            <input type="tel" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required="">
+            <input type="text" name="name" id="name" placeholder="Имя" required="">
+            <label for="tel">Телефон</label>
+            <input type="tel" id="tel" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required="">
           </div>
-          <textarea class="feedback__text" name="name" placeholder="Ваш вопрос"></textarea>
+          <label for="question">Ваш вопрос</label>
+          <textarea class="feedback__text" id="question" placeholder="Ваш вопрос"></textarea>
           <div class="feedback__down">
             <button class="feedback__btn" type="submit" name="button">Задать вопрос</button>
             <div class="feedback__check">
@@ -232,10 +233,10 @@
     <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
     <form class="popup__form" action="" method="post">
       <div class="popup__up">
-        <label for="name">Имя</label>
-        <input type="text" class="popup__name" name="name" placeholder="Имя" required="">
-        <label for="">Телефон</label>
-        <input type="tel" class="popup__tel" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required="">
+        <label for="name-popup">Имя</label>
+        <input type="text" id="name-popup" class="popup__name" name="name" placeholder="Имя" required="">
+        <label for="tel-popup">Телефон</label>
+        <input type="tel" id="tel-popup" class="popup__tel" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required="">
       </div>
       <textarea class="popup__text" name="name" placeholder="Ваш вопрос"></textarea>
       <div class="popup__down">

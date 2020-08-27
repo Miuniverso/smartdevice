@@ -1133,7 +1133,7 @@ template {
           justify-content: space-between;
   margin-bottom: 40px; }
 
-.feedback__up label {
+.feedback label {
   display: none; }
 
 .feedback__up input {
