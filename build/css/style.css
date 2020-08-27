@@ -309,7 +309,7 @@ template {
 
 .main-header {
   background-color: #1b2931;
-  background-image: url("../../img/intro-bg.jpg");
+  background-image: url("../img/intro-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -1025,7 +1025,7 @@ template {
   .feedback::after {
     position: absolute;
     content: "";
-    background-image: url("../../img/Polygon.svg");
+    background-image: url("../img/Polygon.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1037,7 +1037,7 @@ template {
   .feedback::before {
     position: absolute;
     content: "";
-    background-image: url("../../img/Polygon-1.svg");
+    background-image: url("../img/Polygon-1.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1083,7 +1083,7 @@ template {
 
 .feedback__image {
   position: relative;
-  background-image: url("../../img/plane.png");
+  background-image: url("../img/plane.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
