@@ -414,7 +414,7 @@ template {
   width: 19px;
   height: 14px;
   left: -34px;
-  background-image: url("../../img/mail.svg"); }
+  background-image: url("../img/mail.svg"); }
 
 .nav__tel::before {
   content: "";
@@ -422,7 +422,7 @@ template {
   width: 18px;
   height: 18px;
   left: -34px;
-  background-image: url("../../img/phone.svg"); }
+  background-image: url("../img/phone.svg"); }
 
 .nav__btn {
   -webkit-transition: 0.3s;
@@ -1717,7 +1717,7 @@ template {
   background-color: transparent;
   border: none;
   outline: none;
-  background-image: url("../../img/close.svg");
+  background-image: url("../img/close.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

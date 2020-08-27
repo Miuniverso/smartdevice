@@ -43,24 +43,6 @@
   color: #788891;
 }
 
-// .nav__lines {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//
-//   height: 13px;
-//
-//   align-self: center;
-//   margin-left: -83px;
-// }
-//
-// .nav__line {
-//   width: 37px;
-//   height: 1px;
-//
-//   background: #FFFFFF;
-// }
-
 .nav__links-wrapper {
   display: flex;
   justify-content: space-between;
@@ -108,7 +90,7 @@
   height: 14px;
   left: -34px;
 
-  background-image: url("../../img/mail.svg");
+  background-image: url("../img/mail.svg");
 }
 
 .nav__tel::before {
@@ -118,7 +100,7 @@
   height: 18px;
   left: -34px;
 
-  background-image: url("../../img/phone.svg");
+  background-image: url("../img/phone.svg");
 }
 
 .nav__btn {
