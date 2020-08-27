@@ -1096,7 +1096,7 @@ template {
     content: "";
     width: 640px;
     height: 640px;
-    background-image: url("../../img/polygon-2.svg");
+    background-image: url("../img/polygon-2.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1107,7 +1107,7 @@ template {
     content: "";
     width: 373px;
     height: 373px;
-    background-image: url("../../img/polygon-2.svg");
+    background-image: url("../img/polygon-2.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
