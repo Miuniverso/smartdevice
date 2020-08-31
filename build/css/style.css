@@ -1890,7 +1890,7 @@ template {
   height: 5px;
   top: 5px;
   left: 4px;
-  background-image: url("../../img/check.svg");
+  background-image: url("../img/check.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
