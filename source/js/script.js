@@ -30,6 +30,7 @@ var overlay = document.querySelector(".overlay");
 var inputName = document.querySelector(".popup__name");
 var phoneNumber = popup.querySelector(".popup__tel");
 var question = popup.querySelector(".popup__text");
+var storage = "";
 
 popupBtn.addEventListener("click", openPopup);
 
