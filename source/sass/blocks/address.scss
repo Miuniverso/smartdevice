@@ -87,17 +87,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url("../../img/close-footer.svg");
+    background-image: url("../img/close-footer.svg");
 
     outline: none;
 
     // &--open {
-    //   background-image: url("../../img/open.svg");
+    //   background-image: url("../img/open.svg");
     // }
   }
 
   .address__btn .btn-open {
-    background-image: url("../../img/open.svg");
+    background-image: url("../img/open.svg");
   }
 
   .address__title {
