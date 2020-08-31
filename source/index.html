@@ -159,7 +159,7 @@
             <label for="name">Имя</label>
             <input type="text" name="name" id="name" placeholder="Имя" required>
             <label for="tel">Телефон</label>
-            <input type="tel" id="tel" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+            <input type="tel" id="tel" placeholder="Телефон" required>
           </div>
           <label for="question">Ваш вопрос</label>
           <textarea class="feedback__text" id="question" placeholder="Ваш вопрос"></textarea>
@@ -236,7 +236,7 @@
         <label for="name-popup">Имя</label>
         <input type="text" id="name-popup" class="popup__name" name="name" placeholder="Имя" required>
         <label for="tel-popup">Телефон</label>
-        <input type="tel" id="tel-popup" class="popup__tel" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+        <input type="tel" id="tel-popup" class="popup__tel" placeholder="Телефон" required>
       </div>
       <textarea class="popup__text" name="name" placeholder="Ваш вопрос"></textarea>
       <div class="popup__down">
@@ -249,6 +249,7 @@
     </form>
   </section>
   <div class="overlay"></div>
+  <script src="https://unpkg.com/imask"></script>
   <script src="js/script.min.js"></script>
 </body>
 </html>

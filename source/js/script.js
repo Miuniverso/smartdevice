@@ -84,3 +84,16 @@ popup.addEventListener("submit", function (evt) {
   }
   closePopup();
     });
+
+
+// маска телефона
+
+var phoneInputs = document.querySelectorAll("input[type=tel]");
+
+console.log(phoneInputs);
+
+for (var i = 0; i < phoneInputs.length; i++) {
+  new IMask(phoneInputs[i], {
+    mask: "+{7}(000)000-00-00",
+  });
+}

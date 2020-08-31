@@ -44,6 +44,41 @@
   max-width: 1349px;
   margin: 0 auto;
   justify-content: space-around;
+
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 640px;
+    height: 640px;
+    background-image: url("../img/polygon-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    // top: -221px;
+    // left: -143px;
+
+    top: -60px;
+    left: -78px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 373px;
+    height: 373px;
+    background-image: url("../img/polygon-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    // top: 44px;
+    // left: -176px;
+    top: 205px;
+    left: -110px;
+  }
 }
 
 .feedback__title {
@@ -83,33 +118,35 @@
   margin-left: -23px;
   margin-top: -45px;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 640px;
-    height: 640px;
-    background-image: url("../img/polygon-2.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  z-index: 2;
 
-    top: -221px;
-    left: -143px;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 373px;
-    height: 373px;
-    background-image: url("../img/polygon-2.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    top: 44px;
-    left: -176px;
-  }
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 640px;
+  //   height: 640px;
+  //   background-image: url("../img/polygon-2.svg");
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //
+  //   top: -221px;
+  //   left: -143px;
+  // }
+  //
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 373px;
+  //   height: 373px;
+  //   background-image: url("../img/polygon-2.svg");
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //
+  //   top: 44px;
+  //   left: -176px;
+  // }
 }
 
 .feedback__form-wrapper {
@@ -274,7 +311,7 @@
   height: 5px;
   top: 5px;
   left: 35px;
-  background-image: url("../../img/check.svg");
+  background-image: url("../img/check.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -309,6 +346,14 @@
 
   .feedback__wrapper {
     padding-top: 80px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
   }
 
   .feedback__image {

@@ -8,6 +8,18 @@
   padding-left: 71px;
 
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-image: url("../../img/intro.png");
+    background-repeat: no-repeat;
+
+    width: 627px;
+    height: 505px;
+    right: 37px;
+  }
 }
 
 .intro__scroll {
@@ -123,20 +135,19 @@
   max-width: 100%;
   height: auto;
 
-  &::after {
-    content: "";
-    position: absolute;
-
-    background-image: url("../../img/intro.png");
-
-    width: 627px;
-    height: 505px;
-  }
+  z-index: 2;
 }
 
 @media (max-width: $desktop) {
   .intro {
     margin-top: 78px;
+
+    &::after {
+      background-image: url("../../img/intro-tablet.svg");
+      top: -151px;
+      right: -10px;
+      width: 780px;
+    }
   }
 
   .intro__scroll {
@@ -187,6 +198,13 @@
   .intro {
     flex-direction: column-reverse;
     padding: 0;
+
+    &::after {
+      background-image: url("../../img/intro-mobile.svg");
+      top: -132px;
+      right: -1px;
+      width: 321px;
+    }
   }
 
   .intro__text {
@@ -202,7 +220,7 @@
     margin-left: -2px;
     width: 57%;
 
-    z-index: 1;
+    z-index: 3;
     position: relative;
   }
 
