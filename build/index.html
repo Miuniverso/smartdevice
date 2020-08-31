@@ -39,7 +39,12 @@
         <a class="intro__btn" href="#feedback">Получить бесплатную консультацию</a>
         <a class="intro__btn-small" href="#feedback">Бесплатная консультация</a>
       </div>
-        <img class="intro__img" src="img/cards.png" width="705" height="515" alt="печатные платы">
+
+      <picture>
+        <source type="image/webp" srcset="img/cards.webp 1x, img/cards@2x.webp 2x">
+        <img class="intro__img" src="img/cards.png" srcset="img/cards@2x.png 2x" width="705" height="515" alt="печатные платы">
+      </picture>
+        <!-- <img class="intro__img" src="img/cards.png" width="705" height="515" alt="печатные платы"> -->
     </div>
   </header>
   <section class="advantages" id="advantages">
@@ -251,5 +256,6 @@
   <div class="overlay"></div>
   <script src="https://unpkg.com/imask"></script>
   <script src="js/script.min.js"></script>
+  <script src="js/modernizr-custom.min.js"></script>
 </body>
 </html>

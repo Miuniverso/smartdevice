@@ -90,8 +90,6 @@ popup.addEventListener("submit", function (evt) {
 
 var phoneInputs = document.querySelectorAll("input[type=tel]");
 
-console.log(phoneInputs);
-
 for (var i = 0; i < phoneInputs.length; i++) {
   new IMask(phoneInputs[i], {
     mask: "+{7}(000)000-00-00",

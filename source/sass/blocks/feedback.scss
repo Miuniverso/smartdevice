@@ -307,28 +307,15 @@
 .feedback__check input:checked+label::before {
   position: absolute;
   content: "";
-  width: 7px;
-  height: 5px;
-  top: 5px;
-  left: 35px;
+  width: 13px;
+  height: 7px;
+  top: 4px;
+  left: 31px;
   background-image: url("../img/check.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-// .feedback__check input {
-//   position: relative;
-//   opacity: 0;
-//
-//   &::after {
-//     position: absolute;
-//     content: "";
-//     width: 16px;
-//     height: 16px;
-//     border: 1px solid $white;
-//   }
-// }
 
 @media (max-width: $desktop) {
 
@@ -412,7 +399,7 @@
   .feedback__check input:checked+label::before {
     width: 11px;
     height: 10px;
-    top: 4px;
+    top: 5px;
     left: 43px;
   }
 }

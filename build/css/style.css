@@ -314,6 +314,15 @@ template {
   background-size: cover;
   overflow: hidden;
   padding-bottom: 105px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+    .main-header {
+      background-image: url("../img/intro-bg@2x.jpg"); } }
+
+.webp .main-header {
+  background-image: url("../img/intro-bg.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+    .webp .main-header {
+      background-image: url("../img/intro-bg@2x.webp"); } }
 
 @media (max-width: 1023px) {
   .main-header {
@@ -630,7 +639,7 @@ template {
     margin-top: 55px;
     margin-left: 51px; }
   .intro__img {
-    width: 465px;
+    min-width: 465px;
     height: 340px;
     margin-right: 0;
     margin-left: -89px;
@@ -824,7 +833,7 @@ template {
     content: "";
     left: -49px;
     top: 27px;
-    background-image: url("../../img/2005.png");
+    background-image: url("../img/2005.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1267,10 +1276,10 @@ template {
 .feedback__check input:checked + label::before {
   position: absolute;
   content: "";
-  width: 7px;
-  height: 5px;
-  top: 5px;
-  left: 35px;
+  width: 13px;
+  height: 7px;
+  top: 4px;
+  left: 31px;
   background-image: url("../img/check.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -1323,7 +1332,7 @@ template {
   .feedback__check input:checked + label::before {
     width: 11px;
     height: 10px;
-    top: 4px;
+    top: 5px;
     left: 43px; } }
 
 @media (max-width: 767px) {
@@ -1425,11 +1434,11 @@ template {
   background-repeat: no-repeat;
   background-size: contain; }
   .main-footer__link--fb {
-    background-image: url("../../img/fb.svg"); }
+    background-image: url("../img/fb.svg"); }
   .main-footer__link--ok {
-    background-image: url("../../img/ok.svg"); }
+    background-image: url("../img/ok.svg"); }
   .main-footer__link--vk {
-    background-image: url("../../img/vk.svg"); }
+    background-image: url("../img/vk.svg"); }
 
 .main-footer__sections {
   margin-left: 88px; }
