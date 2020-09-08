@@ -78,17 +78,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
 
-  &--fb {
-    background-image: url("../img/fb.svg");
-  }
+.main-footer__icon {
 
-  &--ok {
-    background-image: url("../img/ok.svg");
-  }
-
-  &--vk {
-    background-image: url("../img/vk.svg");
+  &:hover path {
+    transition: 0.3s;
+    fill: $blue;
   }
 }
 
@@ -255,7 +251,7 @@
   }
 
   .main-footer__links-list {
-    margin-top: 18px;
+    margin-top: 31px;
   }
 
   .main-footer__links-item:not(:last-child) {

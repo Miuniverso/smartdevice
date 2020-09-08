@@ -1,28 +1,74 @@
 // футер аккардеон
+
+var items = [document.querySelector(".sections__title"), document.querySelector(".address__title")];
+
+// var items = [document.querySelector(".sections"), document.querySelector(".address")];
+
 var btns = [document.querySelector(".sections__btn"), document.querySelector(".address__btn")];
 
 
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(event) {
+// for (var i = 0; i < items.length, i++) {
+//   items[i].addEventListener("click", )
+// }
 
-    if(event.target.classList.contains("btn-open")) {
-      btns.forEach(function(btn) {
-        btn.classList.remove("btn-open");
-        btn.nextElementSibling.classList.remove("open");
-      });
-    } else {
-      btns.forEach(function(btn) {
-        btn.classList.remove("btn-open");
-        btn.nextElementSibling.classList.remove("open");
-      });
-      event.target.classList.add("btn-open");
-      event.target.nextElementSibling.classList.add("open");
-    }
-  })
+for (var i = 0; i < items.length; i++) {
+  items[i].addEventListener("click", accordion);
+  // btns[i].addEventListener("click", accordion);
+  // btns[i].addEventListener("click", function(event) {
+
+    // if(event.target.classList.contains("btn-open")) {
+    //   btns.forEach(function(btn) {
+    //     btn.classList.remove("btn-open");
+    //     btn.nextElementSibling.classList.remove("open");
+    //   });
+    // } else {
+    //   btns.forEach(function(btn) {
+    //     btn.classList.remove("btn-open");
+    //     btn.nextElementSibling.classList.remove("open");
+    //   });
+    //   event.target.classList.add("btn-open");
+    //   event.target.nextElementSibling.classList.add("open");
+    // }
+  // })
+}
+
+// function accordion(event) {
+//   if(event.target.classList.contains("btn-open")) {
+//     btns.forEach(function(btn) {
+//       btn.classList.remove("btn-open");
+//       btn.nextElementSibling.classList.remove("open");
+//     });
+//   } else {
+//     btns.forEach(function(btn) {
+//       btn.classList.remove("btn-open");
+//       btn.nextElementSibling.classList.remove("open");
+//     });
+//     event.target.classList.add("btn-open");
+//     event.target.nextElementSibling.classList.add("open");
+//   }
+// }
+
+function accordion(event) {
+  console.log(event.currentTarget);
+
+  if(event.target.classList.contains("btn-open") || event.target.nextElementSibling.classList.contains("btn-open")) {
+    btns.forEach(function(btn) {
+      btn.classList.remove("btn-open");
+      btn.nextElementSibling.classList.remove("open");
+    });
+  } else {
+    btns.forEach(function(btn) {
+      btn.classList.remove("btn-open");
+      btn.nextElementSibling.classList.remove("open");
+    });
+    event.target.classList.add("btn-open");
+    event.target.nextElementSibling.classList.add("open");
+  }
 }
 
 // заказать звонок ПОПАП
 
+var mainBody = document.querySelector("body");
 var popupBtn = document.querySelector(".nav__btn");
 var popup = document.querySelector(".popup");
 var popupClose = document.querySelector(".popup__close");
@@ -50,6 +96,7 @@ if (popup) {
 function openPopup() {
   popup.classList.add("open");
   overlay.classList.add("open");
+  mainBody.classList.add("no-scroll");
 
   if (storage) {
     inputName.value = storage;
@@ -62,6 +109,7 @@ function openPopup() {
 function closePopup() {
   popup.classList.remove("open");
   overlay.classList.remove("open");
+  mainBody.classList.remove("no-scroll");
 }
 
 function keyPress (e) {

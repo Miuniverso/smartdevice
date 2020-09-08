@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 3;
 
   background-color: $blue;
 
@@ -99,6 +99,18 @@
   &:-ms-input-placeholder{
     color: white;
   }
+
+  &:invalid {
+  box-shadow: none;
+  }
+
+  &:-moz-submit-invalid {
+  box-shadow: none;
+  }
+
+  &:-moz-ui-invalid {
+  box-shadow:none;
+  }
 }
 
 .popup textarea {
@@ -128,6 +140,7 @@
   text-transform: uppercase;
 
   background-color: transparent;
+  cursor: pointer;
 
   padding-top: 14px;
   padding-bottom: 14px;
@@ -181,6 +194,8 @@
   border: 1px solid $white;
   top: 0;
   left: 0;
+
+  cursor: pointer;
 }
 
 .popup__check input:checked+label::before {

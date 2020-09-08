@@ -64,8 +64,13 @@
   .sections {
     width: 100%;
     border-top: 1px solid rgba(220, 221, 220, 1);
-    padding: 28px 15px;
+    // padding: 28px 15px;
+    padding: 0;
     position: relative;
+  }
+
+  .sections__title {
+    padding: 28px 15px;
   }
 
   .sections__btn {

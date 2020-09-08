@@ -54,6 +54,10 @@
   &:hover .advantages__icon path {
     fill: $white;
   }
+
+  &:hover .advantages__title {
+    color: $white;
+  }
 }
 
 .advantages__icon {
@@ -68,6 +72,7 @@
 
   margin: 0;
   margin-top: 21px;
+  color: $blue;
   // margin-bottom: 5px;
 }
 
@@ -146,9 +151,9 @@
       padding-right: 20px;
     }
 
-    &:nth-child(3) .advantages__desc {
-      margin-top: -6px;
-    }
+    // &:nth-child(3) .advantages__desc {
+    //   margin-top: -6px;
+    // }
 
     &:nth-child(4) {
       padding-right: 15px;
