@@ -1209,7 +1209,7 @@ template {
   padding-right: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: none; }
+  border-radius: 0; }
 
 .feedback__text {
   width: 100%;
@@ -1218,7 +1218,7 @@ template {
   padding: 10 20px;
   min-height: 154px;
   resize: none;
-  border-radius: none; }
+  border-radius: 0; }
 
 .feedback .feedback__text,
 .feedback .feedback__up input {
