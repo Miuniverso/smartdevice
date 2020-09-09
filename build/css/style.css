@@ -801,13 +801,11 @@ template {
     padding-right: 16px;
     padding-bottom: 26px;
     padding-left: 26px; }
-    .advantages__item:nth-child(2) {
+    .advantages__item:nth-child(2n) {
       padding-right: 15px; }
-    .advantages__item:nth-child(3) {
+    .advantages__item:nth-child(3n) {
       padding-right: 20px; }
-    .advantages__item:nth-child(4) {
-      padding-right: 15px; }
-    .advantages__item:nth-child(4) .advantages__desc {
+    .advantages__item:nth-child(4n) .advantages__desc {
       padding-right: 5px; }
   .advantages__title {
     font-size: 20px;
@@ -1177,15 +1175,17 @@ template {
   background-size: contain;
   width: 511px;
   height: 288px;
-  margin-left: -23px;
-  margin-top: -45px;
+  margin-left: 64px;
+  margin-top: -44px;
   z-index: 2; }
 
 .feedback__form-wrapper {
-  margin-left: -60px;
-  margin-top: -8px;
+  margin-left: auto;
+  margin-right: 6.5%;
+  margin-top: -9px;
   background-color: #00B2FF;
-  z-index: 1; }
+  z-index: 1;
+  position: relative; }
 
 .feedback__form {
   max-width: 570px;
