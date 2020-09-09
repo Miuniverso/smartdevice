@@ -13,45 +13,27 @@ var btns = [document.querySelector(".sections__btn"), document.querySelector(".a
 
 for (var i = 0; i < items.length; i++) {
   items[i].addEventListener("click", accordion);
-  // btns[i].addEventListener("click", accordion);
-  // btns[i].addEventListener("click", function(event) {
-
-    // if(event.target.classList.contains("btn-open")) {
-    //   btns.forEach(function(btn) {
-    //     btn.classList.remove("btn-open");
-    //     btn.nextElementSibling.classList.remove("open");
-    //   });
-    // } else {
-    //   btns.forEach(function(btn) {
-    //     btn.classList.remove("btn-open");
-    //     btn.nextElementSibling.classList.remove("open");
-    //   });
-    //   event.target.classList.add("btn-open");
-    //   event.target.nextElementSibling.classList.add("open");
-    // }
-  // })
+  btns[i].addEventListener("click", accordionBtn);
 }
 
-// function accordion(event) {
-//   if(event.target.classList.contains("btn-open")) {
-//     btns.forEach(function(btn) {
-//       btn.classList.remove("btn-open");
-//       btn.nextElementSibling.classList.remove("open");
-//     });
-//   } else {
-//     btns.forEach(function(btn) {
-//       btn.classList.remove("btn-open");
-//       btn.nextElementSibling.classList.remove("open");
-//     });
-//     event.target.classList.add("btn-open");
-//     event.target.nextElementSibling.classList.add("open");
-//   }
-// }
-
 function accordion(event) {
-  console.log(event.currentTarget);
+  if(event.target.nextElementSibling.classList.contains("btn-open")) {
+    btns.forEach(function(btn) {
+      btn.classList.remove("btn-open");
+      btn.nextElementSibling.classList.remove("open");
+    });
+  } else {
+    btns.forEach(function(btn) {
+      btn.classList.remove("btn-open");
+      btn.nextElementSibling.classList.remove("open");
+    });
+    event.target.nextElementSibling.classList.add("btn-open");
+    event.target.nextElementSibling.nextElementSibling.classList.add("open");
+  }
+}
 
-  if(event.target.classList.contains("btn-open") || event.target.nextElementSibling.classList.contains("btn-open")) {
+function accordionBtn(event) {
+  if(event.target.classList.contains("btn-open")) {
     btns.forEach(function(btn) {
       btn.classList.remove("btn-open");
       btn.nextElementSibling.classList.remove("open");
@@ -65,6 +47,7 @@ function accordion(event) {
     event.target.nextElementSibling.classList.add("open");
   }
 }
+
 
 // заказать звонок ПОПАП
 

@@ -1721,7 +1721,9 @@ template {
     margin: 0; }
   .sections__list {
     display: none;
-    margin-top: 30px; } }
+    margin-bottom: 28px;
+    padding: 0 17px;
+    margin-top: 3px; } }
 
 .address__title {
   font-family: "Roboto Condensed", "Roboto", sans-serif;
@@ -1776,7 +1778,9 @@ template {
     padding-right: 20px; }
   .address__info {
     display: none;
-    margin-top: 30px; }
+    margin-bottom: 28px;
+    padding: 0 17px;
+    margin-top: 3px; }
   .address__info .open {
     display: block; }
   .address__btn {
