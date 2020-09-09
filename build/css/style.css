@@ -2026,7 +2026,9 @@ body {
   position: relative; }
 
 .btn-open {
-  background-image: url("../img/open.svg"); }
+  background-image: url("../img/open.svg");
+  width: 16px;
+  max-width: 16px; }
 
 .overlay {
   position: absolute;
