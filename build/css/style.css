@@ -1709,6 +1709,7 @@ template {
     top: 28px;
     right: 17px;
     width: 16px;
+    max-width: 16px;
     height: 16px;
     border: none;
     background-color: transparent;
@@ -1789,6 +1790,7 @@ template {
     top: 28px;
     right: 17px;
     width: 16px;
+    max-width: 16px;
     height: 16px;
     border: none;
     background-color: transparent;

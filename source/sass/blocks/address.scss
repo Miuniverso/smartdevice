@@ -59,8 +59,6 @@
     width: 100%;
     border-top: 1px solid rgba(220, 221, 220, 1);
     border-bottom: 1px solid rgba(220, 221, 220, 1);
-    // padding: 28px 15px;
-    // padding-right: 20px;
     padding: 0;
     position: relative;
   }
@@ -72,15 +70,11 @@
 
   .address__info {
     display: none;
-    // margin-top: 30px;
 
     margin-bottom: 28px;
     padding: 0 17px;
     margin-top: 3px;
 
-    // &--open {
-    //   display: block;
-    // }
   }
 
   .address__info .open {
@@ -93,6 +87,7 @@
     top: 28px;
     right: 17px;
     width: 16px;
+    max-width: 16px;
     height: 16px;
     border: none;
     background-color: transparent;
@@ -103,9 +98,6 @@
 
     outline: none;
 
-    // &--open {
-    //   background-image: url("../img/open.svg");
-    // }
   }
 
   .address__btn .btn-open {
