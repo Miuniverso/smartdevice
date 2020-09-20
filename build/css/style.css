@@ -1657,7 +1657,9 @@ template {
   margin-bottom: 30px; }
 
 .sections__btn {
-  display: none; }
+  display: none;
+  border: none;
+  outline: none; }
 
 .sections__list {
   margin: 0;
@@ -1739,7 +1741,9 @@ template {
   margin-bottom: 30px; }
 
 .address__btn {
-  display: none; }
+  display: none;
+  border: none;
+  outline: none; }
 
 .address p,
 .address a {
@@ -2028,7 +2032,9 @@ body {
 .btn-open {
   background-image: url("../img/open.svg");
   width: 16px;
-  max-width: 16px; }
+  max-width: 16px;
+  border: none;
+  outline: none; }
 
 .overlay {
   position: absolute;
